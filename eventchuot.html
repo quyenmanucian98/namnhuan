@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Chuột</title>
+</head>
+<!--<style>-->
+<!--    img{-->
+<!--        position: absolute;-->
+<!--    }-->
+<!--</style>-->
+<body>
+<img id="anh" src="goldball.jpg" style="position: absolute;left: 100px;"/>
+<script>
+
+    let save = document.getElementById('anh');
+
+    function MoveRight() {
+        save.style.left=parseInt(save.style.left) + 100 + 'px'
+    }
+    function MoveLeft() {
+        save.style.left=parseInt(save.style.left) - 100 +'px'
+    }
+
+</script><br>
+<input type="button" value="Sang trái" onclick="MoveLeft()"/><br>
+<input type="button" value="Sang Phải" onclick="MoveRight()"/>
+</body>
+</html>

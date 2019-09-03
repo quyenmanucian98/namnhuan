@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event bàn Phím</title>
+</head>
+<body>
+<img id="nobita" src="images.jpg" style="position: relative;top: 10px;left: 10px;"/>
+<script>
+    function UpArrow() {
+        let ronaldo= document.getElementById('nobita');
+        ronaldo.style.top = parseInt(ronaldo.style.top) - 10 + 'px';
+    }
+    function DownArrow() {
+    let ronaldo = document.getElementById('nobita');
+    ronaldo.style.top = parseInt(ronaldo.style.top) + 10 +'px';
+    }
+    function LeftArrow() {
+        let  ronaldo = document.getElementById('nobita');
+        ronaldo.style.left= parseInt(ronaldo.style.left) - 10 + 'px';
+    }
+    function RightArrow() {
+        let ronaldo = document.getElementById('nobita');
+        ronaldo.style.left= parseInt(ronaldo.style.left) + 10 + 'px';
+    }
+    function MoveSeletion(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                LeftArrow();
+                break;
+            case 39:
+                RightArrow();
+                break;
+            case 38:
+                UpArrow();
+                break;
+            case 40:
+                DownArrow();
+                break
+        }
+    }
+    window.addEventListener('keydown',MoveSeletion);
+</script>
+</body>
+</html>
